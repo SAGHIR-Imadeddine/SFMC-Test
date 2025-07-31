@@ -1,5 +1,5 @@
 import axios from "axios";
-import sfmc from "../config/sfmcConfig";
+import sfmc from "../config/sfmcConfig.js";
 
 export const getAutomations = async (req, res) => {
   const { access_token, expires_at, tssd } = req.session;
