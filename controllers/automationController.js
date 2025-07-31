@@ -3,6 +3,8 @@ import sfmc from "../config/sfmcConfig.js";
 
 export const getAutomations = async (req, res) => {
   const { access_token, expires_at, tssd } = req.session;
+  console.log(req.session);
+
   if (!access_token || Date.now() >= expires_at)
     return res
       .status(401)
