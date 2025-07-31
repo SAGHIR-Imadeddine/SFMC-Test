@@ -11,7 +11,7 @@ const port = conf.port || 3000;
 app.use(
   session({
     secret: conf.sessionSecret,
-    resave: false,
+    resave: true,
     saveUninitialized: true,
     cookie: {
       secure: true,
