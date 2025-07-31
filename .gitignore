@@ -1,0 +1,5 @@
+.env
+.dockerignore
+.vscode/
+cert/
+node_modules/
