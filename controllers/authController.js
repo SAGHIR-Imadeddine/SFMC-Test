@@ -26,12 +26,12 @@ export const callback = async (req, res) => {
     );
 
     const { access_token, expires_in } = response.data;
-    console.log(response.data);
+    console.log("1 callback res", response.data);
 
     req.session.access_token = access_token;
     req.session.tssd = tssd;
     req.session.expires_at = Date.now() + expires_in * 1000;
-    console.log(req.session.access_token);
+    console.log("1 callback AT", req.session.access_token);
 
     res.redirect(`/automations`);
   } catch (error) {
