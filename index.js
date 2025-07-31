@@ -4,11 +4,11 @@ import router from "./routes/appRoutes.js";
 import authRouter from "./routes/authRoutes.js";
 import automationRouter from "./routes/automationRoutes.js";
 import session from "express-session";
-import FileStore from "session-file-store";
+import createFileStore from "session-file-store";
 
 const app = express();
 const port = conf.port || 3000;
-
+const FileStore = createFileStore(session);
 app.use(
   session({
     store: new FileStore(),
