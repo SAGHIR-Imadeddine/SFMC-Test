@@ -9,6 +9,7 @@ import createFileStore from "session-file-store";
 const app = express();
 const port = conf.port || 3000;
 const FileStore = createFileStore(session);
+app.set("trust proxy", 1);
 app.use(
   session({
     store: new FileStore(),
